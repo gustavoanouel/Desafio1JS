@@ -5,13 +5,16 @@ function calcular() {
   if (y <= 0) {
     text = "Es necesario introducir un número entero";
     document.querySelector("#cantText").style.display = "none";
+    document.querySelector("#total").innerHTML = text;
+    document.querySelector("#total").style.color = "red";
   } else {
     calculo = parseFloat(price) * parseFloat(y);
     text = calculo;
     document.querySelector("#cantText").style.display = "block";
+    document.querySelector("#total").innerHTML = "$" + text;
+    document.querySelector("#total").style.color = "black";
+    document.querySelector("#cantText").innerHTML = y + " Candados";
   }
-  document.querySelector("#total").innerHTML = "$" + text;
-  document.querySelector("#cantText").innerHTML = y + " Candados";
 }
 
 function colorChange() {
